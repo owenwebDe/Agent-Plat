@@ -7,8 +7,8 @@
     --text-primary: #cbd5e1; /* Slate */
     --text-headers: #f8fafc; /* White/Off-white */
     --border-glass: rgba(56, 189, 248, 0.2);
-    --glass-panel: rgba(11, 16, 26, 0.85); /* More opaque for readability */
-    --font-head: 'Orbitron', sans-serif;
+    --glass-panel: rgba(11, 16, 26, 0.85);
+    --font-head: 'Stick', sans-serif;
     --font-body: 'Outfit', sans-serif;
     --transition: 0.2s ease-out;
     --glow-spread: 0 0 20px rgba(0, 234, 255, 0.3);
