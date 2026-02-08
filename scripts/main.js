@@ -20,7 +20,7 @@ class Particle {
         this.size = Math.random() * 2 + 1;
         this.speedX = Math.random() * 1 - 0.5;
         this.speedY = Math.random() * 1 - 0.5;
-        this.color = '#d6a655';
+        this.color = '#00f3ff';
     }
     update() {
         this.x += this.speedX;
@@ -57,7 +57,7 @@ function animate() {
             const distance = Math.sqrt(dx * dx + dy * dy);
             if (distance < 100) {
                 ctx.beginPath();
-                ctx.strokeStyle = `rgba(214, 166, 85, ${1 - distance/100})`;
+                ctx.strokeStyle = `rgba(0, 243, 255, ${1 - distance/100})`;
                 ctx.lineWidth = 0.5;
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
