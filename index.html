@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Plat E.Puss | Elite Crypto Asset</title>
+    <!-- Fonts: Space Grotesk for headers, Outfit for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.jpg">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <canvas id="neural-canvas"></canvas>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="brand">
+                <img src="assets/images/logo.jpg" alt="Agent Puss Logo" class="brand-logo">
+                <span class="brand-text">PLAT E.PUSS</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#mission" class="nav-link">Mission</a>
+                <a href="#tokenomics" class="nav-link">Intelligence</a>
+                <a href="#roadmap" class="nav-link">Protocol</a>
+                <a href="https://four.meme/token/0x779914570ff4a3012dd69446db48df4bf6714444" target="_blank" class="nav-btn">But Here</a>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-text-col">
+                <h1 class="hero-title">
+                    The World’s Most <br>
+                    <span class="gradient-text">Elite Agent</span>
+                </h1>
+                <!-- <p class="hero-desc">
+                    In a world of monotony, one Platypus operates in the shadows. 
+                    <strong>Agent Plat E. Puss</strong>. The meme coin with a license to thrill.
+                </p> -->
+                
+                <div class="hero-actions">
+                    <a href="https://four.meme/token/0x779914570ff4a3012dd69446db48df4bf6714444" class="btn btn-primary btn-glow">
+                        <span class="btn-content">BUY NOW<i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <button onclick="copyCA()" class="btn btn-secondary">
+                        <span class="ca-truncate">0x779914570ff4a3012dd69446db48df4bf6714444</span>
+                        <i class="fas fa-copy"></i>
+                    </button>
+                    <!-- Hidden input for full copy -->
+                    <input type="text" value="0x779914570ff4a3012dd69446db48df4bf6714444" id="full-ca" style="position:absolute; opacity:0; pointer-events:none;">
+                </div>
+            </div>
+            <div class="hero-img-col">
+                <!-- Main Character -->
+                <div class="character-holder">
+                    <div class="circle-graphic"></div>
+                    <img src="assets/images/one-removebg-preview.png" alt="Agent Plat E.Puss" class="hero-character">
+                  
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Infinite Marquee / Caution Tape -->
+    <div class="marquee-wrapper-pro">
+        <!-- Strip 1: Left to Right -->
+        <div class="marquee-line line-1">
+            <div class="marquee-content-pro">
+                <span>TOP SECRET</span> <span class="star">★</span> 
+                <span>CLASSIFIED PROTOCOL</span> <span class="star">★</span> 
+                <span>EYES ONLY</span> <span class="star">★</span> 
+                <span>LEVEL 5 CLEARANCE</span> <span class="star">★</span> 
+                <span>TOP SECRET</span> <span class="star">★</span> 
+                <span>CLASSIFIED PROTOCOL</span> <span class="star">★</span> 
+                <span>EYES ONLY</span> <span class="star">★</span> 
+                <span>LEVEL 5 CLEARANCE</span> <span class="star">★</span>
+                <span>TOP SECRET</span> <span class="star">★</span> 
+                <span>CLASSIFIED PROTOCOL</span> <span class="star">★</span> 
+                <span>EYES ONLY</span> <span class="star">★</span> 
+            </div>
+        </div>
+
+        <!-- Strip 2: Right to Left -->
+        <div class="marquee-line line-2">
+            <div class="marquee-content-pro reverse">
+                <span>$PlattyMcSecret</span> <span class="star">★</span> 
+                <span>AGENT DETECTED</span> <span class="star">★</span> 
+                <span>MISSION ACTIVE</span> <span class="star">★</span> 
+                <span>INITIATE BUY PROTOCOL</span> <span class="star">★</span> 
+                <span>$PlattyMcSecret</span> <span class="star">★</span> 
+                <span>AGENT DETECTED</span> <span class="star">★</span> 
+                <span>MISSION ACTIVE</span> <span class="star">★</span> 
+                <span>INITIATE BUY PROTOCOL</span> <span class="star">★</span>
+                <span>$PlattyMcSecret</span> <span class="star">★</span> 
+                <span>AGENT DETECTED</span> <span class="star">★</span> 
+                <span>MISSION ACTIVE</span> <span class="star">★</span> 
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">ORIGIN STORY</span>
+                <h2 class="section-title">THE <span class="highlight">LEGEND</span></h2>
+            </div>
+            <div class="about-content text-center" style="max-width: 800px; margin: 0 auto;">
+                <p class="lead-text" style="font-size: 1.1rem; color: #a0a0a0; line-height: 1.8;">
+                    In a world where office life is dull and spreadsheets rule, one platypus rises above the monotony. 
+                    Known only as <strong class="highlight">Agent Plat E. Puss</strong>, he sneaks through the shadows, 
+                    delivering top-secret missions with style, a fedora, and an impeccable sense of humor.
+                </p>
+                <br>
+                <p class="lead-text" style="font-size: 1.1rem; color: #a0a0a0; line-height: 1.8;">
+                    Some say he’s a legend, some say he’s just a really clever platypus… but one thing is certain: 
+                    this little agent is always ready for action, and now, you can own a piece of his meme-worthy exploits.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission / About -->
+    <section id="mission" class="section dark-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">MISSION <span class="highlight">OBJECTIVES</span></h2>
+            </div>
+            
+            <div class="mission-grid-pro">
+                <!-- Card 1 -->
+                <div class="tech-card">
+                    <div class="card-corner top-left"></div>
+                    <div class="card-corner top-right"></div>
+                    <div class="card-corner bottom-left"></div>
+                    <div class="card-corner bottom-right"></div>
+                    
+                    <div class="tech-header">
+                        <span class="file-id">FILE_ID: 001-ALPHA</span>
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="tech-body">
+                        <div class="icon-display">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3>AGENT IDENTITY</h3>
+                        <p class="data-text">
+                            SUBJECT: Agent Plat E. Puss<br>
+                            ORIGIN: Unknown<br>
+                            STATUS: Active Field Agent<br>
+                            <br>
+                            Operates in the shadows. Master of disguise. The fedora is not just a fashion statement; it's a warning.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="tech-card highlight-card">
+                    <div class="card-corner top-left"></div>
+                    <div class="card-corner top-right"></div>
+                    <div class="card-corner bottom-left"></div>
+                    <div class="card-corner bottom-right"></div>
+
+                    <div class="tech-header">
+                        <span class="file-id">FILE_ID: 009-GLOBAL</span>
+                        <span class="status-dot active"></span>
+                    </div>
+                    <div class="tech-body">
+                        <div class="icon-display">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>OPERATIONAL SCOPE</h3>
+                        <p class="data-text">
+                            TARGET: BNB Smart Chain<br>
+                            MISSION: Meme Dominance<br>
+                            STRATEGY: Viral Infiltration<br>
+                            <br>
+                            Deploying across decentralized nodes. Securing the bag while maintaining impeccable comedic timing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="tech-card">
+                    <div class="card-corner top-left"></div>
+                    <div class="card-corner top-right"></div>
+                    <div class="card-corner bottom-left"></div>
+                    <div class="card-corner bottom-right"></div>
+
+                    <div class="tech-header">
+                        <span class="file-id">FILE_ID: 777-ASSET</span>
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="tech-body">
+                        <div class="icon-display">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>ASSET CLASSIFICATION</h3>
+                        <p class="data-text">
+                            TYPE: $PlattyMcSecret Token<br>
+                            SECURITY: Maximum<br>
+                            VOLATILITY: High Energy<br>
+                            <br>
+                            Not just a token. Membership to the agency. Holding requires Level 5 clearance (and diamond hands).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tokenomics / Intel -->
+    <section id="tokenomics" class="section">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-half">
+                    <h2 class="section-title">Token <span class="highlight">Metrics</span></h2>
+                    <p class="lead-text">Transparent, secure, and ready for deployment. The $PlattyMcSecret token is designed for the long-term mission.</p>
+                    
+                    <ul class="stats-list">
+                        <li>
+                            <span class="stat-label">Network</span>
+                            <span class="stat-value">BNB Smart Chain</span>
+                        </li>
+                        <li>
+                            <span class="stat-label">Symobl</span>
+                            <span class="stat-value">$PlattyMcSecret</span>
+                        </li>
+                        <li>
+                            <span class="stat-label">Platform</span>
+                            <span class="stat-value">Four.Meme</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-half">
+                    <div class="cyber-card">
+                        <div class="cyber-header">
+                            <span>CA: PROTOCOL</span>
+                        </div>
+                        <div class="cyber-body">
+                            <code class="contract-code">0x779914570ff4a3012dd69446db48df4bf6714444</code>
+                            <div class="copy-wrapper">
+                                <button onclick="copyCA()" class="btn btn-sm btn-primary">COPY ADDRESS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chart -->
+    <section id="chart" class="section dark-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Live <span class="highlight">Intel</span></h2>
+            </div>
+            <div class="chart-container">
+                <style>
+                    .chart-embed-wrapper {
+                        position: relative;
+                        width: 100%;
+                        height: 800px; /* Taller for Four.Meme interface */
+                        border-radius: 12px;
+                        overflow: hidden;
+                        box-shadow: 0 0 30px rgba(102, 252, 241, 0.1);
+                        border: 1px solid rgba(102, 252, 241, 0.2);
+                        background: #000;
+                    }
+                    .chart-embed-wrapper iframe {
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                </style>
+                <div class="chart-embed-wrapper">
+                    <iframe src="https://four.meme/token/0x779914570ff4a3012dd69446db48df4bf6714444" title="Four.Meme Chart"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap / Protocol -->
+    <section id="roadmap" class="section dark-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">The <span class="highlight">Roadmap</span></h2>
+            </div>
+
+            <div class="roadmap-container">
+                <div class="roadmap-line"></div>
+                
+                <div class="roadmap-item left">
+                    <div class="content">
+                        <h3>Phase 1: Infiltration</h3>
+                        <p>Launch on Four.Meme. Establish secure channels. Deploy Agent Plat E.Puss to the BNB network.</p>
+                    </div>
+                </div>
+                
+                <div class="roadmap-item right">
+                    <div class="content">
+                        <h3>Phase 2: Recruitment</h3>
+                        <p>Expand the agency. Viral marketing campaigns. Onboard strategic partners and influencers.</p>
+                    </div>
+                </div>
+                
+                <div class="roadmap-item left">
+                    <div class="content">
+                        <h3>Phase 3: Domination</h3>
+                        <p>Global recognition. Major exchange listings. The Platypus takes command of the meme sector.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>AGENT PLAT E.PUSS</h2>
+                <p>The meme coin with a license to thrill.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://four.meme/token/0x779914570ff4a3012dd69446db48df4bf6714444" target="_blank"><i class="fas fa-globe"></i> Four.Meme</a>
+                <a href="https://t.me/+7rGkLhQ26NBmYjUy" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
+        </div>
+        <div class="footer-disclaimer text-center">
+            <p style="max-width: 800px; margin: 0 auto 20px; font-size: 0.75rem; color: #8c6b36; line-height: 1.5;">
+                <strong>DISCLAIMER:</strong> $PlattyMcSecret is a meme coin with no intrinsic value or expectation of financial return. 
+                There is no formal team or roadmap. The coin is completely useless and for entertainment purposes only. 
+                Invest at your own risk.
+            </p>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Agent Plat E.Puss Project. All Rights Classified.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
